@@ -361,7 +361,7 @@ export default function Home({ params }: Props) {
 
         <ParallaxLayer
           className="relative px-[200px] z-[3]"
-          offset={5}
+          offset={5.2}
           factor={0.5}
           speed={0.2}
         >
@@ -370,7 +370,7 @@ export default function Home({ params }: Props) {
 
         <ParallaxLayer
           className="relative px-[200px] z-[3]"
-          offset={5.2}
+          offset={5.4}
           factor={0.5}
           speed={0.4}
         >

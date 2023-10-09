@@ -84,10 +84,10 @@ export default function Home({ params }: Props) {
   // Side-Effect
   useEffect(() => {
     const container = document.querySelector(".container-main");
-    container?.addEventListener("DOMMouseScroll", scrollMapper);
+    container?.addEventListener("wheel", scrollMapper);
 
     return () => {
-      container?.removeEventListener("DOMMouseScroll", scrollMapper);
+      container?.removeEventListener("wheel", scrollMapper);
     };
   }, []);
 
@@ -187,7 +187,7 @@ export default function Home({ params }: Props) {
           speed={0.3}
           className="relative z-[2]"
         >
-          <FirstPageImageTrail delay={120} open={activityMap[2] === true}>
+          <FirstPageImageTrail delay={20} open={activityMap[2] === true}>
             <animated.img
               className="absolute left-[0] right-[750px] bottom-[0] top-[0] m-[auto] w-[700px] h-[900px] rounded-xl"
               src={NguyetVongLauView.src}
@@ -204,7 +204,7 @@ export default function Home({ params }: Props) {
           speed={0.5}
           className="relative z-[2]"
         >
-          <FirstPageImageTrail delay={300} open={activityMap[2] === true}>
+          <FirstPageImageTrail delay={120} open={activityMap[2] === true}>
             <animated.img
               className="absolute left-[30px] bottom-[-250px] w-[400px] h-[600px] rounded-xl object-cover"
               src={GirlOutside.src}
@@ -221,7 +221,7 @@ export default function Home({ params }: Props) {
           speed={0.7}
           className="relative z-[2]"
         >
-          <FirstPageImageTrail delay={100} open={activityMap[2] === true}>
+          <FirstPageImageTrail delay={50} open={activityMap[2] === true}>
             <animated.img
               className="absolute right-[10px] bottom-[-400px] w-[400px] h-[600px] rounded-xl"
               src={Barview.src}
@@ -238,7 +238,7 @@ export default function Home({ params }: Props) {
           speed={0.5}
           className="relative z-[1]"
         >
-          <FirstPageImageTrail delay={100} open={activityMap[2] === true}>
+          <FirstPageImageTrail delay={50} open={activityMap[2] === true}>
             <animated.img
               className="absolute right-[370px] bottom-[-500px] w-[400px] h-[600px] object-cover rounded-xl"
               src={MAIN_SLIDESHOW[3].src}
@@ -256,7 +256,7 @@ export default function Home({ params }: Props) {
           speed={1}
           className="relative flex z-[1] flex-col items-center"
         >
-          <FirstPageImageTrail delay={120} open={activityMap[3] === true}>
+          <FirstPageImageTrail delay={60} open={activityMap[3] === true}>
             <div className="flex flex-col items-center">
               <p className="font-light text-xl">Branding concept</p>
               <p className="mt-12 text-5xl text-center px-[20%]">
@@ -433,7 +433,7 @@ export default function Home({ params }: Props) {
           speed={0.5}
           factor={3}
         >
-          <animated.div className="relative h-full bg-[#533A70]" />
+          <animated.div className="relative h-full bg-[#3a7ac3]" />
         </ParallaxLayer>
       </Parallax>
     </main>

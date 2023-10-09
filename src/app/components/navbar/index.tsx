@@ -33,10 +33,10 @@ const Navbar = ({ params }: Props) => {
         <li className="uppercase">{t("contact")}</li>
         <ul className="border-l-2 pl-3 border-white text-gray-400 flex items-center">
           <li
-            onClick={updateLanguage("vi")}
+            onClick={updateLanguage("vi-VN")}
             className={`uppercas ${isVI && "text-white"}`}
           >
-            <Link href="/vi/" locale={false}>
+            <Link href="/vi-VN/" locale={false}>
               VI
             </Link>
           </li>
@@ -45,10 +45,10 @@ const Navbar = ({ params }: Props) => {
             <BsSlashLg />
           </li>
           <li
-            onClick={updateLanguage("en")}
+            onClick={updateLanguage("en-US")}
             className={`uppercas ${!isVI && "text-white"}`}
           >
-            <Link href="/en/" locale={false}>
+            <Link href="/en-US/" locale={false}>
               EN
             </Link>
           </li>

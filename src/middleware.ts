@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 // Regex to check whether something has an extension, e.g. .jpg
 const PUBLIC_FILE = /\.(.*)$/;
-const FALLBACK_LANG = "vi";
+const FALLBACK_LANG = "vi-VN";
 
 export function middleware(request: NextRequest) {
   const { nextUrl, headers, cookies } = request;
@@ -30,19 +30,19 @@ export function middleware(request: NextRequest) {
 
     // Proceed without redirection if on a localized path
     if (
-      nextUrl.pathname.startsWith("/en") ||
-      nextUrl.pathname.startsWith("/vi")
+      nextUrl.pathname.startsWith("/en-US") ||
+      nextUrl.pathname.startsWith("/vi-VN")
     ) {
       return undefined;
     }
 
-    if (language === "en") {
-      url.pathname = `/en${nextUrl.pathname}`;
+    if (language === "en-US") {
+      url.pathname = `/en-US${nextUrl.pathname}`;
       return NextResponse.redirect(url);
     }
 
-    if (language === "vi") {
-      url.pathname = `/vi${nextUrl.pathname}`;
+    if (language === "vi-VN") {
+      url.pathname = `/vi-VN${nextUrl.pathname}`;
       return NextResponse.redirect(url);
     }
 

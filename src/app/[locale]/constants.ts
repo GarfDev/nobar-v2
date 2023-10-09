@@ -34,4 +34,4 @@ export const MAIN_SLIDESHOW = [
 
 export const PAGE_COUNT = 5;
 
-export const OFFSET_ARR = [0, 432, 1428, 2592, 3456];
+export const OFFSET_ARR = [0, 432, 1628, 2592, 3456];

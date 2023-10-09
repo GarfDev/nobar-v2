@@ -14,7 +14,7 @@ import React, {
 import BarSpace from "../../../public/bar-space.jpg";
 import Barview from "../../../public/bar-view.jpg";
 import GirlOutside from "../../../public/girl-outside.jpg";
-import ImageOne from "../../../public/image-one.jpg";
+import OthersAndLook from "../../../public/others-and-looks.png";
 import NguyetVongLauView from "../../../public/nguyet-vong-lau-view.jpg";
 import NoBarBlackWhite from "../../../public/no-bar-black-white.png";
 import NoBarPurpleGreen from "../../../public/no-bar-purple-green.png";
@@ -96,6 +96,7 @@ export default function Home({ params }: Props) {
     <main className="scroll-smooth w-full h-full">
       <Parallax
         ref={containerRef}
+        config={{ friction: 40 }}
         className="scroll-smooth container-main"
         style={{ top: "0", left: "0" }}
         pages={PAGE_COUNT}
@@ -313,127 +314,45 @@ export default function Home({ params }: Props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.3}
-          factor={1.5}
-          speed={0.7}
-          className="relative px-[200px]  z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.1 - HIỆN HỮU</p>
-          <p className="text-3xl mt-6">
-            Gin infuse Hibiscus / Pineapple wine / Bianco Vermouth / CO2
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3.5}
-          factor={1.5}
-          speed={0.8}
-          className="relative px-[200px]  z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.2 - PHI LÍ</p>
-          <p className="text-3xl mt-6">
-            Beefeater Gin / Jim Beam / Tomato cordial / green chartreuse / CO2
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3.7}
-          factor={1.5}
-          speed={0.8}
-          className="relative px-[200px]  z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.3 - KIỆN TÍNH</p>
-          <p className="text-3xl mt-6">
-            Tanqueray Gin / Bacardi light / Lillet / persimmon cordial
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3.9}
-          factor={1.5}
-          speed={0.8}
-          className="relative px-[200px]  z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.4 - ĐÍCH THỰC</p>
-          <p className="text-3xl mt-6">
-            Gin infuse butterfly pea / white chocolate / coriander / lavender
-          </p>
-        </ParallaxLayer>
-
-        {/* FIVE PAGE */}
-
-        <ParallaxLayer
-          offset={4.1}
+          offset={3.95}
           factor={1}
-          speed={0.8}
+          speed={0.1}
           className="relative px-[200px] z-[1]"
         >
-          <p className="font-bold text-6xl">NO.5 - NGƯỜI KHÁC VÀ CÁI NHÌN</p>
-          <p className="text-3xl mt-6">
-            Dalat green bell pepper / seaweed / Cachaca 51 / DOM Benedictine
-          </p>
+          <div className="absolute flex flex-col top-[0] bottom-[0] left-[-50%] right-[0] m-[auto] w-[600px]">
+            <p className="font-bold uppercase text-2xl mb-5">
+              NO.5 - người khác và cái nhìn
+            </p>
+            <p className="font-thin text-xl mb-10">asdasdasdasdasd</p>
+            <animated.img
+              className="w-[100%] h-[800px] object-cover"
+              src={OthersAndLook.src}
+              width={500}
+              height={500}
+              alt="no-bar-logo"
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4.3}
-          factor={1}
-          speed={0.8}
+          offset={3.2}
+          factor={0.5}
+          speed={-0.1}
           className="relative px-[200px] z-[1]"
         >
-          <p className="font-bold text-6xl">NO.6 GIẬN DỮ VÀ SỢ HÃI</p>
-          <p className="text-3xl mt-6">
-            Bacardi light / vodka infuse bitter melon / frangelico / maraschino
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4.5}
-          factor={1}
-          speed={0.8}
-          className="relative px-[200px] z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.7 - TUYỆT VỌNG</p>
-          <p className="text-3xl mt-6">
-            Hennessy V.S / Jimbean black / mushrooms / Peychaud&lsquo;s bitter
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4.7}
-          factor={1}
-          speed={0.8}
-          className="relative px-[200px] z-[1]"
-        >
-          <p className="font-bold text-6xl">NO.8 - TỒN TẠI VÀ HƯ VÔ</p>
-          <p className="text-3xl mt-6">
-            Michelia tonkinensis seeds / blended scotch / campari / amaretto /
-            laphroaig 10Y
-          </p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={4}
-          factor={1}
-          speed={1.4}
-          className="relative z-[0]"
-        >
-          <animated.img
-            className="absolute w-[40%] h-[800px] left-[30%] right-[0] top-[-10%] z-[2] bottom-[0] m-[auto] object-cover"
-            style={{ ...blackWhiteLogo }}
-            src={ImageOne.src}
-            width={500}
-            height={500}
-            alt="no-bar-logo"
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          className="test z-[0] w-full h-full"
-          offset={3}
-          speed={0.5}
-          factor={3}
-        >
-          <animated.div className="relative h-full bg-[#3a7ac3]" />
+          <div className="absolute flex flex-col top-[0] bottom-[0] left-[0] right-[-50%] m-[auto] w-[600px]">
+            <animated.img
+              className="w-[100%] h-[700px] object-cover rounded-xl"
+              src={OthersAndLook.src}
+              width={500}
+              height={500}
+              alt="no-bar-logo"
+            />
+            <p className="font-bold uppercase text-2xl mt-5">
+              NO.5 - người khác và cái nhìn
+            </p>
+            <p className="font-thin text-xl mt-10">asdasdasdasdasd</p>
+          </div>
         </ParallaxLayer>
       </Parallax>
     </main>

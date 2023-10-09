@@ -15,6 +15,7 @@ import BarSpace from "../../../public/bar-space.jpg";
 import Barview from "../../../public/bar-view.jpg";
 import GirlOutside from "../../../public/girl-outside.jpg";
 import OthersAndLook from "../../../public/others-and-looks.png";
+import Authenticity from "../../../public/authenticity.png";
 import NguyetVongLauView from "../../../public/nguyet-vong-lau-view.jpg";
 import NoBarBlackWhite from "../../../public/no-bar-black-white.png";
 import NoBarPurpleGreen from "../../../public/no-bar-purple-green.png";
@@ -255,7 +256,7 @@ export default function Home({ params }: Props) {
           offset={2.2}
           factor={1}
           speed={1}
-          className="relative flex z-[1] flex-col items-center"
+          className="relative flex z-[3] flex-col items-center"
         >
           <FirstPageImageTrail delay={60} open={activityMap[3] === true}>
             <div className="flex flex-col items-center">
@@ -273,7 +274,7 @@ export default function Home({ params }: Props) {
           offset={2.6}
           factor={1}
           speed={0.7}
-          className="relative flex flex-col justify-center items-center"
+          className="relative z-[3] flex flex-col justify-center items-center"
         >
           <animated.img
             className="absolute z-[1] w-[1500px] h-[900px] object-cover rounded-xl"
@@ -288,7 +289,7 @@ export default function Home({ params }: Props) {
           offset={2.99}
           factor={1}
           speed={1.3}
-          className="relative flex z-[1] justify-end pt-[100px] px-[100px]"
+          className="relative flex z-[4] justify-end pt-[100px] px-[100px]"
         >
           <animated.img
             className="absolute w-[400px] h-[700px] object-cover"
@@ -299,60 +300,148 @@ export default function Home({ params }: Props) {
           />
         </ParallaxLayer>
 
+        <ParallaxLayer
+          offset={2.1}
+          factor={1}
+          speed={0}
+          className="relative flex z-[2] justify-end pt-[100px] px-[100px]"
+        >
+          <animated.div
+            className="absolute left-[0] top-[0] w-[100%] bg-[#321c48] object-cover h-[100vh]"
+            style={{ ...gradientBackground }}
+          ></animated.div>
+        </ParallaxLayer>
+
         {/** FOUR PAGE*/}
 
         <ParallaxLayer
-          offset={3}
+          offset={3.55}
           factor={1}
-          speed={1}
-          className="relative px-[200px]  z-[1]"
+          speed={0.15}
+          className="relative px-[200px] z-[1]"
         >
-          <h2 className="font-bold text-9xl">MODERN COCKTAILS</h2>
-          <p className="text-3xl mt-6">
-            lấy cảm hứng từ những thành tố cơ bản bên trong ta
-          </p>
+          <div className="absolute flex flex-col top-[0] bottom-[0] left-[-50%] right-[0] m-[auto] w-[800px]">
+            <p className="text-5xl leading-[4rem] mb-12">
+              Tiếp nối ý tưởng từ không gian, tiếp tục chọn sự hiện sinh, chọn
+              những thành tố cơ bản bên trong mỗi chúng ta đặt tên cho từng món
+              rựu.
+            </p>
+            <animated.img
+              className="w-[100%] h-[1100px] object-cover"
+              src={OthersAndLook.src}
+              width={500}
+              height={500}
+              alt="no-bar-logo"
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.95}
-          factor={1}
-          speed={0.1}
+          offset={3.5}
+          factor={0.5}
+          speed={-0.15}
           className="relative px-[200px] z-[1]"
         >
-          <div className="absolute flex flex-col top-[0] bottom-[0] left-[-50%] right-[0] m-[auto] w-[600px]">
-            <p className="font-bold uppercase text-2xl mb-5">
-              NO.5 - người khác và cái nhìn
-            </p>
-            <p className="font-thin text-xl mb-10">asdasdasdasdasd</p>
+          <div className="absolute flex flex-col top-[0] bottom-[0] left-[0] right-[-50%] m-[auto] w-[700px]">
             <animated.img
               className="w-[100%] h-[800px] object-cover"
-              src={OthersAndLook.src}
+              src={Authenticity.src}
               width={500}
               height={500}
               alt="no-bar-logo"
             />
+            <p className="text-5xl leading-[4rem] mt-10">
+              Với hy vọng mỗi ly rựu có thể khơi gợi cho bạn, một chút gì đó của
+              chính mình.
+            </p>
+          </div>
+        </ParallaxLayer>
+
+        {/* PAGE FIVE */}
+
+        <ParallaxLayer
+          className="relative px-[200px] z-[3]"
+          offset={5}
+          factor={0.5}
+          speed={0.2}
+        >
+          <h2 className="font-bold text-9xl">MODERN COCKTAILS</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          className="relative px-[200px] z-[3]"
+          offset={5.2}
+          factor={0.5}
+          speed={0.4}
+        >
+          <div className="flex">
+            <div className="flex flex-col mr-12">
+              <h5 className="uppercase font-bold text-2xl">NO.1 - Hiện hữu</h5>
+              <p className="font-light text-xl mb-5">
+                Gin infuse hibiscus / Pineapple wine / Bianco vermouth / CO2
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">NO.2 - Phi Lí</h5>
+              <p className="font-light text-xl mb-5">
+                Beefeater Gin / Jim Beam / Tomato cordial / Green chartreuse /
+                CO2
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">NO.2 - Kiện tính</h5>
+              <p className="font-light text-xl mb-5">
+                Tanqueray Gin / Bacardi light / Lillet / Persimmon cordial
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">NO.2 - Đích thực</h5>
+              <p className="font-light text-xl mb-5">
+                Gin infuse butterfly pea / White chocolate / Coriander /
+                Lavender
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="uppercase font-bold text-2xl">
+                NO.5 - Người khác và cái nhìn
+              </h5>
+              <p className="font-light text-xl mb-5">
+                Dalat green bell pepper / seaweed / Cachaca 51 / DOM Benedictine
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">
+                NO.6 - Giận dữ và sợ hãi
+              </h5>
+              <p className="font-light text-xl mb-5">
+                BeBacardi light / Vodka infuse Bitter melon / Frangelico /
+                Maraschino
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">
+                NO.7 - Tuyệt vọng
+              </h5>
+              <p className="font-light text-xl mb-5">
+                Hennessy V.S / Jimbean black / Mushrooms / Peychaud's bitter
+              </p>
+
+              <h5 className="uppercase font-bold text-2xl">
+                NO.8 - Tồn tại và hư vô
+              </h5>
+              <p className="font-light text-xl mb-5">
+                Michelia tonkinensis seeds / Blended scotch / Campari / Amaretto
+                / Laphroaig 10Y
+              </p>
+            </div>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.2}
+          className="relative z-[2]"
+          offset={5}
           factor={0.5}
-          speed={-0.1}
-          className="relative px-[200px] z-[1]"
+          speed={0}
         >
-          <div className="absolute flex flex-col top-[0] bottom-[0] left-[0] right-[-50%] m-[auto] w-[600px]">
-            <animated.img
-              className="w-[100%] h-[700px] object-cover rounded-xl"
-              src={OthersAndLook.src}
-              width={500}
-              height={500}
-              alt="no-bar-logo"
-            />
-            <p className="font-bold uppercase text-2xl mt-5">
-              NO.5 - người khác và cái nhìn
-            </p>
-            <p className="font-thin text-xl mt-10">asdasdasdasdasd</p>
-          </div>
+          <animated.div
+            className="absolute left-[0] top-[0] w-[100%] bg-[#462369] object-cover h-[100vh]"
+            style={{ ...gradientBackground }}
+          ></animated.div>
         </ParallaxLayer>
       </Parallax>
     </main>

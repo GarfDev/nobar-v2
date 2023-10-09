@@ -32,6 +32,6 @@ export const MAIN_SLIDESHOW = [
   ImageFive,
 ];
 
-export const PAGE_COUNT = 5;
+export const PAGE_COUNT = 6;
 
 export const OFFSET_ARR = [0, 432, 1628, 2592, 3456];

@@ -418,7 +418,7 @@ export default function Home({ params }: Props) {
                 NO.7 - Tuyệt vọng
               </h5>
               <p className="font-light text-xl mb-5">
-                Hennessy V.S / Jimbean black / Mushrooms / Peychaud's bitter
+                Hennessy V.S / Jimbean black / Mushrooms / Peychaud&lsquo;s bitter
               </p>
 
               <h5 className="uppercase font-bold text-2xl">
